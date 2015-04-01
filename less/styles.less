@@ -1,0 +1,65 @@
+// =======================================
+// © Guava Design Ltd
+// Author: Rich Milns @richmilns
+// Project:
+// Date:
+// =======================================
+
+// Baseline variables and styles e.g. typography
+@import 'shared/bootstrap';
+
+// Responsive layout for base screen size, smartphone screens (smallest) first
+@import 'shared/responsive/base';
+
+@media only screen and (max-width:unit((@bp-portrait-smartphone-max / @base-font-size-px), em)) {
+	// < landscape smartphone screens
+	// @import 'shared/responsive/smartphone-portrait-max';
+}
+
+@media only screen and (min-width:unit((@bp-landscape-smartphone / @base-font-size-px), em)) {
+	// > portrait smartphone screens
+	@import 'shared/responsive/smartphone-landscape';
+}
+
+@media only screen and (max-width:unit((@bp-landscape-smartphone-max / @base-font-size-px), em)) {
+	// < portrait tablet width screens
+	// @import 'shared/responsive/smartphone-landscape-max';
+}
+
+@media only screen and (min-width:unit((@bp-portrait-tablet / @base-font-size-px), em)) {
+	// > portrait tablet width screens
+	@import 'shared/responsive/tablet-portrait';
+}
+
+@media only screen and (max-width:unit((@bp-landscape-tablet-max / @base-font-size-px), em)) {
+	// < landscape tablet width screens
+	// @import 'shared/responsive/tablet-portrait-max';
+}
+
+@media only screen and (min-width:unit((@bp-landscape-tablet / @base-font-size-px), em)) {
+	// > landscape tablet width screens
+	@import 'shared/responsive/tablet-landscape';
+}
+
+@media only screen and (max-width:unit((@bp-landscape-tablet-max / @base-font-size-px), em)) {
+	// < landscape tablet width screens
+	// @import 'shared/responsive/tablet-landscape-max';
+}
+
+@media only screen and (min-width:unit((@bp-desktop / @base-font-size-px), em)) {
+	// > desktop width screens
+	@import 'shared/responsive/desktop';
+}
+
+@media only screen and (min-width:unit((@bp-wide-desktop / @base-font-size-px), em)) {
+	// > wider width desktop screens
+	@import 'shared/responsive/wide-desktop';
+}
+
+// misc. responsive media queries that don't fit into any of the above breakpoint patterns
+// @import 'shared/responsive/misc-tweaks';
+
+// Printer friendly styles
+@media print {
+	@import 'shared/print';
+}
