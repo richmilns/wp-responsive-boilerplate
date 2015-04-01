@@ -171,6 +171,7 @@ function wprb_wp_title( $title, $sep ) {
 /**
  * Re-usable helper function to output the name of the current template file at the start of each page / post / taxonomy template
  */
-function wprb_get_current_template_comment($file){
-	return '<!-- template: ' . str_replace('.php', '', basename($file)) . ' -->' . PHP_EOL;
+function wprb_get_current_template_comment($file, $closing=false){
+	$closing = ($closing === true) ? '/' : null;
+	return '<!-- ' . $closing . '' . str_replace('.php', '', basename($file)) . ' -->' . PHP_EOL;
 }

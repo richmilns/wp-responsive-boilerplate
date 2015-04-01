@@ -10,8 +10,8 @@ endif;
 $prev = get_previous_posts_link(__('« ' . $prevText, WPRB_THEME_ID));
 $next = get_next_posts_link(__($nextText .' »', WPRB_THEME_ID));
 if($prev or $next):
-	$prev = str_replace('<a ', '<a class="btn btn-blue" ', $prev);
-	$next = str_replace('<a ', '<a class="btn btn-blue" ', $next);
+	$prev = str_replace('<a ', '<a class="btn btn-primary" ', $prev);
+	$next = str_replace('<a ', '<a class="btn btn-primary" ', $next);
 	?>
 <nav class="page-nav">
 	<ul>
@@ -21,3 +21,4 @@ if($prev or $next):
 </nav>
 <?php
 endif;
+echo wprb_get_current_template_comment(__FILE__, true);
