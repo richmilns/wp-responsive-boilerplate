@@ -81,6 +81,6 @@ endif;
 wp_nav_menu(array(
 	'theme_location' => 'primary',
 	'container'=>'nav',
-	'container_class'=> 'main-nav main-nav-small main-nav-no-top-level-child-indicators main-nav-extra-padding'
+	'container_class'=> 'main-nav'
 ))
 ?>
