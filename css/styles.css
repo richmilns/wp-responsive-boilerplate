@@ -655,10 +655,8 @@ a::-moz-focus-inner {
   zoom: 1;
   padding-left: 20px;
   padding-left: 1.25rem;
-  margin-left: -18px;
-  margin-left: -1.125rem;
-  margin-right: -18px;
-  margin-right: -1.125rem;
+  margin-left: -20px;
+  margin-left: -1.25rem;
   position: relative;
   overflow: hidden;
 }
