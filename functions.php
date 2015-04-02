@@ -136,6 +136,9 @@ function wprb_scripts_styles() {
 		if ($pictureFill = of_get_option('picturefill_enabled')):
 			wp_enqueue_script( 'picturefill', 'https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.0/picturefill.min.js', false, '2.3.0', false);
 		endif;
+
+		// Theme specific JS example:
+		// wp_enqueue_script( WPRB_THEME_ID, get_template_directory_uri() . '/js/site-min.js', false, '1.0.0', true);
 	}
 
 }
