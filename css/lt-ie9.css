@@ -532,6 +532,10 @@ a:hover {
 a::-moz-focus-inner {
   border: 0;
 }
+figure {
+  margin: 0;
+  padding: 0;
+}
 .grid {
   zoom: 1;
   padding-left: 20px;
