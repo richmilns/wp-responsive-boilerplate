@@ -8,3 +8,4 @@ Compatible with the following plugins:
 
 * [Wordpress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/)
 * [Taxonomy Images](https://wordpress.org/plugins/taxonomy-images/)
+* [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
