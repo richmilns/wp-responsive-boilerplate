@@ -5,7 +5,7 @@ if ( post_password_required() ) {
 }
 ?>
 <?php if ( have_comments() ) : ?>
-<section class="comments content" id="comments">
+<section class="comments" id="comments">
 	<h6><?php
 		printf( _nx( 'One comment about &ldquo;%2$s&rdquo;', '%1$s comments about &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', WPRB_THEME_ID ),
 			number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
@@ -31,19 +31,19 @@ if ( post_password_required() ) {
 $args = array(
 	'fields' => apply_filters(
 		'comment_form_default_fields', array(
-			'author'  => '<label for="author">' . __( 'Your Name', WPRB_THEME_ID ) . '*</label><input class="pure-input-1-3" id="author" placeholder="First &amp; Last Name" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" required>',
-			'email'  => '<label for="email">' . __( 'Email Address', WPRB_THEME_ID ) . '*</label><input class="pure-input-1-3" id="email" placeholder="your-real-email@example.com" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" required>',
-			'url'  => '<label for="url">' . __( 'Website URL', WPRB_THEME_ID ) . '</label><input class="pure-input-1-3" id="url" placeholder="http://example.com" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" required>',
+			'author'  => '<label for="author">' . __( 'Your Name', WPRB_THEME_ID ) . '*</label><input id="author" placeholder="First &amp; Last Name" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" required>',
+			'email'  => '<label for="email">' . __( 'Email Address', WPRB_THEME_ID ) . '*</label><input id="email" placeholder="your-real-email@example.com" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" required>',
+			'url'  => '<label for="url">' . __( 'Website URL', WPRB_THEME_ID ) . '</label><input id="url" placeholder="http://example.com" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" required>',
 		)
 	),
-	'comment_field' => '<label for="comment">' . __( 'Your Comment', WPRB_THEME_ID ) . '*</label><textarea id="comment" name="comment" placeholder="Express your thoughts, idea or write a feedback by writing your reply here" class="pure-input-1-2" rows="8" required"></textarea>',
+	'comment_field' => '<label for="comment">' . __( 'Your Comment', WPRB_THEME_ID ) . '*</label><textarea id="comment" name="comment" placeholder="Express your thoughts, idea or write a feedback by writing your reply here" class="pure-input-1-2" rows="8" required></textarea>',
 	'comment_notes_after' => '',
-	'title_reply' => '<h6>Please Post Your Comments & Reviews</h6>'
+	'title_reply' => __( 'Please Post Your Comments & Reviews', WPRB_THEME_ID )
 );
 
 ob_start();
 comment_form($args);
 $form = ob_get_clean();
-$form = str_replace('class="submit"', 'class="btn btn-blue"', $form);
-$form = str_replace('class="comment-respond"', 'class="comment-respond pure-form pure-form-stacked content"', $form);
+$form = str_replace('class="submit"', 'class="btn btn-primary"', $form);
+$form = str_replace('class="comment-respond"', 'class="comment-respond"', $form);
 echo $form;
