@@ -1,0 +1,99 @@
+// *********************************************** WP Galleries */
+.gallery {
+	.gallery-item {
+		text-align:left !important;
+
+		&:nth-child(3n+3) {
+			// disable clear settings for smaller screens where we will have been in 2 columns
+			clear:none;
+		}
+
+		.gallery-caption {
+			display:block;
+		}
+
+		.gallery-icon {
+			.height(120px);
+		}
+	}
+
+	&.gallery-columns-2 {
+		.gallery-item {
+			width:50% !important;
+
+			&:nth-child(2n+3) {
+				clear:left;
+			}
+		}
+	}
+
+	&.gallery-columns-3 {
+		.gallery-item {
+			width:33.333333333% !important;
+
+			&:nth-child(3n+4) {
+				clear:left;
+			}
+		}
+	}
+
+	&.gallery-columns-4 {
+		.gallery-item {
+			width:25% !important;
+
+			&:nth-child(4n+5) {
+				clear:left;
+			}
+		}
+	}
+
+	&.gallery-columns-5 {
+		.gallery-item {
+			width:20% !important;
+
+			&:nth-child(5n+6) {
+				clear:left;
+			}
+		}
+	}
+
+	&.gallery-columns-6 {
+		.gallery-item {
+			width:16.666666667% !important;
+
+			&:nth-child(6n+7) {
+				clear:left;
+			}
+		}
+	}
+
+	&.gallery-columns-7 {
+		.gallery-item {
+			width:14.285714286% !important;
+
+			&:nth-child(7n+8) {
+				clear:left;
+			}
+		}
+	}
+
+	&.gallery-columns-8 {
+		.gallery-item {
+			width:12.5% !important;
+
+			&:nth-child(8n+9) {
+				clear:left;
+			}
+		}
+	}
+
+	&.gallery-columns-9 {
+		.gallery-item {
+			width:11.111111111% !important;
+
+			&:nth-child(9n+10) {
+				clear:left;
+			}
+		}
+	}
+}

@@ -20,3 +20,51 @@
 		width:33.3333%;
 	}
 }
+
+// *********************************************** Featured Images */
+.featured-image,
+.wp-caption {
+	.width(250px) !important;
+
+	&.align-right,
+	&.alignright {
+		.margin(0 0 20px 20px);
+		float:right;
+		clear:right;
+	}
+
+	&.align-left,
+	&.alignleft {
+		.margin(0 20px 20px 0);
+		float:left;
+		clear:left;
+	}
+
+	&.align-center,
+	&.aligncenter {
+		.margin(0 auto 20px auto);
+		float:none;
+		clear:both;
+	}
+}
+
+.featured-image-m {
+	.width(440px) !important;
+}
+
+.featured-image-l {
+	.width(640px) !important;
+}
+
+.featured-image-xl {
+	.width(800px) !important;
+}
+
+// *********************************************** WP Galleries */
+.gallery {
+	.gallery-item {
+		.gallery-icon {
+			.height(140px);
+		}
+	}
+}

@@ -1,0 +1,117 @@
+// Wordpress classes
+// @see http://line25.com/tutorials/how-to-build-your-own-wordpress-theme
+// ================================
+
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.alignright {
+	float:right;
+	margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 100%;
+	padding: 5px 3px 10px;
+	text-align: center;
+
+	&.alignnone {
+		margin: 5px 20px 20px 0;
+	}
+
+	&.alignleft {
+		margin: 5px 20px 20px 0;
+	}
+
+	&.alignright {
+		margin: 5px 0 20px 20px;
+	}
+
+	img {
+		border: 0 none;
+		height: auto;
+		margin: 0;
+		max-width: 100%;
+		padding: 0;
+		width: auto;
+	}
+}
+
+// *********************************************** WP Galleries */
+.gallery {
+	.clearfix;
+	.gallery-item {
+		float:left;
+		clear:left;
+		text-align:center;
+		width:100% !important;
+		box-sizing: border-box;
+		.padding-bottom(10px);
+
+
+		.gallery-icon {
+			max-width:100%;
+			height:auto;
+
+			a {
+				img {
+					max-width:100% !important;
+					height:auto !important;
+				}
+			}
+		}
+
+		.gallery-caption {
+			display:none;
+			.font-size(12px);
+			font-style:italic;
+		}
+	}
+}
+
+// *********************************************** CF7 Plugin */
+.visually-hidden,
+.screen-reader-response {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height:  1px;
+	width:   1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+.wpcf7-response-output {
+	border:none !important;
+	// .border-radius(5px) !important;
+	.padding(10px) !important;
+	.margin(0 0 10px 0) !important;
+	color:white !important;
+
+	&.wpcf7-validation-errors {
+		background:#D13C38;
+	}
+
+	&.wpcf7-mail-sent-ok {
+		background:#53B44F;
+	}
+}

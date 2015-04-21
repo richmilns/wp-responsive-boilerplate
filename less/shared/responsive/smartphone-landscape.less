@@ -8,3 +8,21 @@
 		width:50%;
 	}
 }
+
+// *********************************************** WP Galleries */
+.gallery {
+	.gallery-item {
+		width:50% !important;
+		clear:none;
+		.padding-right(10px);
+
+		&:nth-child(3n+3) {
+			clear:left;
+		}
+
+		.gallery-icon {
+			.height(120px);
+			overflow: hidden;
+		}
+	}
+}
