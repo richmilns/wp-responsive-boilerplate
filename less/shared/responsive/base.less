@@ -74,3 +74,73 @@ figure {
 	}
 }
 
+// *********************************************** Main Nav Toggle */
+
+// Toggle main nav button - use jQuery.click() to toggle the .toggle-main-nav-active class
+.toggle-main-nav {
+	position:relative;
+	display:block;
+	.dimensions(40px, 40px);
+
+	&:before,
+	span,
+	&:after {
+		position:absolute;
+		display:block;
+		content:' ';
+		left:0;
+		top:45%;
+		font-size:0 !important;
+		background:#9F9D9D;
+		width:100%;
+		.height(6px);
+		.transform-origin(center);
+		// use transition delays to make the transform into an X seem staggered and animated
+		.transition(transform @default-transition-length 0s @default-transition-easing, opacity @default-transition-length @default-transition-length @default-transition-easing, margin-top @default-transition-length @default-transition-length @default-transition-easing);
+	}
+
+	b {
+		position:absolute;
+		.left(50px);
+		.top(12px);
+	}
+
+	&:before {
+		.margin-top(-12px);
+	}
+
+	span {
+		.margin-top(0px);
+	}
+
+	&:after {
+		.margin-top(12px);
+	}
+
+	// activated stated - appears like an X close symbol
+	&.toggle-main-nav-active {
+		&:before {
+			// form an X out of the top...
+			.rotate(-45deg);
+			.margin-top(0);
+		}
+
+		&:after {
+			// ... and bottom bars
+			.rotate(45deg);
+			.margin-top(0);
+		}
+
+		span {
+			// hide the middle bar
+			opacity:0;
+		}
+
+		&:before,
+		span,
+		&:after {
+			// reverse the order of the transitions by increasing / decreasing the delay
+			.transition(opacity @default-transition-length 0s @default-transition-easing, margin-top @default-transition-length 0s @default-transition-easing, transform @default-transition-length @default-transition-length @default-transition-easing);
+		}
+	}
+}
