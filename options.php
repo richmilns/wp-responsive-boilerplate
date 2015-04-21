@@ -114,6 +114,12 @@ function optionsframework_options() {
 		'type' => 'text'
 	);
 
+	$options[] = array(
+		'name' => __('Google+ URL', WPRB_THEME_ID),
+		'id' => 'social_gp_url',
+		'type' => 'text'
+	);
+
 	// advanced tab
 	$options[] = array(
 		'name' => __('Advanced', WPRB_THEME_ID),
