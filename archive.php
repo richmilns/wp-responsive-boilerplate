@@ -14,7 +14,7 @@ if (have_posts()):
 		echo sprintf('<h2>%s &#8216;%s&#8217; %s</h2>',
 			__('Archive for the', WPRB_THEME_ID),
 			single_cat_title(null, false),
-			 _e('Category', WPRB_THEME_ID)
+			 __('Category', WPRB_THEME_ID)
 		);
 
 	elseif(is_tag()):
