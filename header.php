@@ -47,6 +47,9 @@ endif;
 if ($customCss = of_get_option('custom_css')):
 	echo '<style type="text/css">' . PHP_EOL . '/* Custom CSS from Theme Options */' . PHP_EOL . $customCss . PHP_EOL . '</style>' . PHP_EOL;
 endif;
+
+wp_head();
+
 if($googleAnalyticsTrackingCode = of_get_option('google_analytics_tracking_code')):?>
 <!-- Google Analytics Tracking Code -->
 <script>
@@ -60,9 +63,7 @@ ga('send', 'pageview');
 </script>
 <!-- /Google Analytics Tracking Code -->
 <?php
-endif;
-
-wp_head();?>
+endif;?>
 </head>
 
 <?php
