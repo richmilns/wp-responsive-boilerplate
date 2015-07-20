@@ -4,7 +4,7 @@
  */
 get_header();
 echo wprb_get_current_template_comment(__FILE__);
-echo '<main class="content" role="main">';
+echo '<main class="content">';
 echo '<div class="content-sidebar-wrapper">';
 echo '<div class="content-sidebar-inner-wrapper">';
 echo '<div class="content-inner">';

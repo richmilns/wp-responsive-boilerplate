@@ -19,7 +19,7 @@ if ( post_password_required() ) {
 	?>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-	<nav id="comment-nav-below" class="comment-navigation" role="navigation">
+	<nav id="comment-nav-below" class="comment-navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', WPRB_THEME_ID ); ?></h1>
 		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', WPRB_THEME_ID ) ); ?></div>
 		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', WPRB_THEME_ID ) ); ?></div>

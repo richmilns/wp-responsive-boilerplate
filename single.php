@@ -1,7 +1,7 @@
 <?php
 get_header();
 echo wprb_get_current_template_comment(__FILE__);
-echo '<main class="content" role="main">';
+echo '<main class="content">';
 get_template_part('inc/breadcrumbs');
 while ( have_posts() ) :
 	the_post();
