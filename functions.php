@@ -117,7 +117,7 @@ function wprb_scripts_styles() {
 	if (!is_admin()) {
 		// Example: jQuery from CDNJS
 		// wp_deregister_script('jquery');
-		// wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js', false, null);
+		// wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, null);
 		// wp_enqueue_script('jquery');
 		// fancybox 2 support from CDNJS
 		// wp_enqueue_script( 'fancybox215', '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js');
@@ -134,7 +134,7 @@ function wprb_scripts_styles() {
 		endif;
 
 		if ($pictureFill = of_get_option('picturefill_enabled')):
-			wp_enqueue_script( 'picturefill', 'https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.0/picturefill.min.js', false, '2.3.0', false);
+			wp_enqueue_script( 'picturefill', 'https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js', false, '2.3.1', false);
 		endif;
 
 		// Theme specific JS example:
@@ -177,4 +177,12 @@ function wprb_wp_title( $title, $sep ) {
 function wprb_get_current_template_comment($file, $closing=false){
 	$closing = ($closing === true) ? '/' : null;
 	return '<!-- ' . $closing . '' . str_replace('.php', '', basename($file)) . ' -->' . PHP_EOL;
+}
+
+/**
+ * Declaring support for WooCommerce
+ */
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+	add_theme_support( 'woocommerce' );
 }

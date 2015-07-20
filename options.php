@@ -153,7 +153,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __('Use PictureFill for supporting Responsive Images in older browsers?', WPRB_THEME_ID),
-		'desc' => __('Tick this box to load the PictureFill javascript polyfill (2.3.0) from CDNJS', WPRB_THEME_ID),
+		'desc' => __('Tick this box to load the PictureFill javascript polyfill (2.3.1) from CDNJS', WPRB_THEME_ID),
 		'id' => 'picturefill_enabled',
 		'type' => 'checkbox',
 		'std' => '1',

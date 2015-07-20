@@ -1,9 +1,9 @@
 <!doctype html>
-<!--[if IE 6]><html class="ie6 no-js no-svg" <?php language_attributes(); ?>><![endif]-->
-<!--[if IE 7]><html class="ie7 no-js no-svg" <?php language_attributes(); ?>><![endif]-->
-<!--[if IE 8]><html class="ie8 no-js no-svg" <?php language_attributes(); ?>><![endif]-->
-<!--[if IE 9]><html class="ie9 no-js no-svg" <?php language_attributes(); ?>><![endif]-->
-<!--[if !IE]><!--><html class="no-js no-svg" <?php language_attributes(); ?>><!--<![endif]-->
+<!--[if IE 6]><html class="ie6 no-js no-svg no-flex" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 7]><html class="ie7 no-js no-svg no-flex" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 8]><html class="ie8 no-js no-svg no-flex" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js no-svg no-flex" <?php language_attributes(); ?>><![endif]-->
+<!--[if !IE]><!--><html class="no-js no-svg no-flex" <?php language_attributes(); ?>><!--<![endif]-->
 <head>
 <script>
 (function(H){
@@ -12,6 +12,10 @@
 	// Detect SVG support
 	if(!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect) {
 		H.className=H.className.replace(/\bno-svg\b/,'svg');
+	}
+	// Detect display:flex support
+	if (('flexWrap' in H.style) || ('WebkitFlexWrap' in H.style) || ('msFlexWrap' in H.style)){
+		H.className=H.className.replace(/\bno-flex\b/,'flex');
 	}
 })(document.documentElement)
 </script>
