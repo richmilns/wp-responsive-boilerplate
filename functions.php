@@ -55,7 +55,7 @@ function wprb_custom_login_logo() {
 	// check to see if we have an option
 	if($image = of_get_option('login_logo')) {
 		// override the WP CSS
-		echo sprintf('<style type="text/css"> .login h1 a { background-image:url(%s); background-size:auto; }</style>',
+		echo sprintf('<style type="text/css"> .login h1 a { background-image:url(%s); background-size:auto 100%%; width:100%%; background-position:center center; }</style>',
 			$image
 		);
 	}
